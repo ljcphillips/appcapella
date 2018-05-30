@@ -24,6 +24,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     public_suffix (3.0.2)
+    puma (3.11.4)
     rack (2.0.5)
     rack-protection (2.0.1)
       rack
@@ -71,6 +72,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  puma
   rack-test
   rspec
   selenium-webdriver
