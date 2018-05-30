@@ -3,6 +3,10 @@ feature 'page should multiple videos' do
     visit ('/')
     visit page.find('#video1')[:src]
     expect(page.status_code).to be(200)
-    # expect(page.find('video1')['src']).to have_content 'video1.mov'
+  end
+  scenario 'second video is displayed' do
+    visit ('/')
+    visit page.find('#video2')[:src]
+    expect(page.status_code).to be(200)
   end
 end
