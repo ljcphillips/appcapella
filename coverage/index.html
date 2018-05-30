@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-30T12:21:37+01:00">2018-05-30T12:21:37+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-30T15:55:40+01:00">2018-05-30T15:55:40+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">92.31%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="red">
+         0.9
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>9</b> relevant lines. 
-    <span class="green"><b>9</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>13</b> relevant lines. 
+    <span class="green"><b>12</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,13 +51,13 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#38834a5e3bc6be983ecbc7756d70ba1f15de03d9" class="src_link" title="spec/features/index_spec.rb">spec/features/index_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="strong"><a href="#7442ec19b563a21d556a9c4f6443cfd0a6e2e1d8" class="src_link" title="spec/features/index_spec.rb">spec/features/index_spec.rb</a></td>
+        <td class="green strong">92.31 %</td>
+        <td>17</td>
+        <td>13</td>
         <td>12</td>
-        <td>9</td>
-        <td>9</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>1</td>
+        <td>0.9</td>
       </tr>
       
     </tbody>
@@ -76,14 +76,14 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="38834a5e3bc6be983ecbc7756d70ba1f15de03d9">
+        <div class="source_table" id="7442ec19b563a21d556a9c4f6443cfd0a6e2e1d8">
   <div class="header">
     <h3>spec/features/index_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">92.31 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>13</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -105,7 +105,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit (&#39;/&#39;)</code>
+          <code class="ruby">    visit &#39;/&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -135,7 +135,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit (&#39;/&#39;)</code>
+          <code class="ruby">    visit &#39;/&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
@@ -156,7 +156,37 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &#39;both videos should start playing on one click&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &#39;/&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&quot;#playButton&quot;).click</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">    video = find(&quot;#videoElement&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
