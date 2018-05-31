@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_red.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,18 +14,18 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-31T12:26:57+01:00">2018-05-31T12:26:57+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-31T15:00:10+01:00">2018-05-31T15:00:10+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">70.59%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.7
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>1</b> files in total.
     <b>17</b> relevant lines. 
-    <span class="green"><b>12</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <span class="green"><b>17</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,13 +51,13 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#378bb465845613ec31a618412a99ca1065728e74" class="src_link" title="spec/features/index_spec.rb">spec/features/index_spec.rb</a></td>
-        <td class="red strong">70.59 %</td>
+        <td class="strong"><a href="#38834a5e3bc6be983ecbc7756d70ba1f15de03d9" class="src_link" title="spec/features/index_spec.rb">spec/features/index_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
         <td>23</td>
         <td>17</td>
-        <td>12</td>
-        <td>5</td>
-        <td>0.7</td>
+        <td>17</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
     </tbody>
@@ -76,14 +76,14 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="378bb465845613ec31a618412a99ca1065728e74">
+        <div class="source_table" id="38834a5e3bc6be983ecbc7756d70ba1f15de03d9">
   <div class="header">
     <h3>spec/features/index_spec.rb</h3>
-    <h4><span class="red">70.59 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>17</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -180,32 +180,32 @@
           <code class="ruby">      visit &#39;/&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
           <code class="ruby">      find(&#39;#playButton&#39;).click</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
           <code class="ruby">      find(&#39;#video1&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
           <code class="ruby">      get_paused = &quot;$(&#39;#video1&#39;)[0].paused;&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">      is_paused = page.evaluate_script(get_paused)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(is_paused).to eq(false)</code>
         </li>
