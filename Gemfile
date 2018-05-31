@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 ruby '2.5.0'
 
 gem 'capybara'
+gem 'puma'
+gem 'selenium-webdriver'
 gem 'simplecov'
 gem 'simplecov-console'
 gem 'rspec'
