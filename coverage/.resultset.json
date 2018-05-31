@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lorrainephillips/Projects/appcapella/spec/features/index_spec.rb": [
+      "/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/features/index_spec.rb": [
         1,
         1,
         1,
@@ -27,6 +27,6 @@
         null
       ]
     },
-    "timestamp": 1527695094
+    "timestamp": 1527775210
   }
 }
