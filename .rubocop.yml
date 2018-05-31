@@ -1,0 +1,28 @@
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+
+IndentationConsistency:
+  Enabled: true
+
+IndentationWidth:
+  Enabled: true
+
+IndentArray:
+  Enabled: false
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+HashSyntax:
+  Enabled: false
+
+Style/SpecialGlobalVars:
+  EnforcedStyle: use_perl_names
