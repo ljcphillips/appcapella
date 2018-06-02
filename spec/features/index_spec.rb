@@ -27,9 +27,23 @@ feature 'page should multiple videos' do
 end
 
 feature 'should upload and play a video' do
-  scenario 'there should be a video player ready for the uploaded video' do
+  scenario 'there should be a video player that does not initially play', :js => true do
     visit '/'
-    visit page.find('#video_new')[:src]
-    expect(page.status_code).to be(200)
+    find("#playButton").click
+    get_paused3 = "$('#video_new')[0].paused;"
+    is_paused3 = page.evaluate_script(get_paused3)
+    expect(is_paused3).to eq(true)
   end
+
+  scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
+    visit '/'
+    #THIS ABSOLUTE PATH NEEDS FIXING!
+    attach_file("video_upload_new",'/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/new_video.mov')
+    find("#upload_video").click
+    find("#playButton").click
+    get_paused3 = "$('#video_new')[0].paused;"
+    is_paused3 = page.evaluate_script(get_paused3)
+    expect(is_paused3).to eq(false)
+  end
+
 end
