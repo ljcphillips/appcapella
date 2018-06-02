@@ -2,7 +2,6 @@ language: ruby
 rvm:
 - 2.5.0
 script:
-- xvfb-run make test
 - bundle exec rspec spec
 services:
 before_install:
@@ -15,3 +14,7 @@ deploy:
   app: appcapella
   on:
     repo: ljcphillips/appcapella
+env:
+  - MOZ_HEADLESS=1
+addons:
+  firefox: latest
