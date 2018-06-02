@@ -1,14 +1,3 @@
-<!--
-<button type="button" id="playButton">PLAY</button>
-<video controls="controls" width="800" height="600" id="video1"
-       name="video1" src="./video1.mov"></video>
-
-<video controls="controls" width="800" height="600" id="video2"
-        name="video1" src="./video2.mov"></video>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="./src/index.js"></script> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>AppCapella</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -80,27 +69,45 @@
           <div class="row pt-2 pb-2">
             <div class="col-md-6">
               <video controls="controls" width="100%" height="100%" id="video1"
-                     name="video1" src="./video1.mov"></video>
+                     name="video1" src="<%= @filename1 %>"></video>
               <div class="overlay"></div>
             </div>
             <div class="col-md-6">
               <video controls="controls" width="100%" height="100%" id="video2"
-                      name="video1" src="./video2.mov"></video>
+                      name="video1" src="<%= @filename2 %>"></video>
             </div>
           </div>
           <div class="row pt-2 pb-2">
             <div class="col-md-6">
-              <video controls="controls" width="100%" height="100%" id="video2"
-                      name="video1" src="./video2.mov"></video>
+              <video controls="controls" width="100%" height="100%" id="video3"
+                      name="video3" src="<%= @filename3 %>"></video>
             </div>
             <div class="col-md-6">
-              <video controls="controls" width="100%" height="100%" id="video1"
-                     name="video1" src="./video1.mov"></video>
+              <video controls="controls" width="100%" height="100%" id="video4"
+                     name="video4" src="<%= @filename4 %>"></video>
             </div>
           </div>
         </div>
         <div class="row">
           <button type="button" id="playButton">PLAY</button>
+        </div>
+        <div class="row">
+          <form action="/upload_1" method="POST" enctype="multipart/form-data">
+            <input type="file" accept="video/*" name="video_upload_1">
+            <input type="submit" value="Upload video" id="upload_video_1">
+          </form>
+          <form action="/upload_2" method="POST" enctype="multipart/form-data">
+            <input type="file" accept="video/*" name="video_upload_2">
+            <input type="submit" value="Upload video" id="upload_video_2">
+          </form>
+          <form action="/upload_3" method="POST" enctype="multipart/form-data">
+            <input type="file" accept="video/*" name="video_upload_3">
+            <input type="submit" value="Upload video" id="upload_video_3">
+          </form>
+          <form action="/upload_4" method="POST" enctype="multipart/form-data">
+            <input type="file" accept="video/*" name="video_upload_4">
+            <input type="submit" value="Upload video" id="upload_video_4">
+          </form>
         </div>
       </div>
     </div>
