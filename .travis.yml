@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.5.0
+script:
+- bundle exec rspec spec
+services:
+before_install:
+- gem install bundler
+before_script:
+deploy:
+  provider:
+  api_key:
+    secure:
+  app: appcapella
+  on:
+    repo: ljcphillips/appcapella
