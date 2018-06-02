@@ -4,16 +4,15 @@ class Appcapella < Sinatra::Base
   enable :sessions
 
   get '/' do
-    @filename = session[:newfilename]
+    @filename1 = session[:filename1]
     erb(:index)
   end
 
-  post '/upload_new' do
-      tempfile = params[:video_upload_new][:tempfile]
-      @filename = params[:video_upload_new][:filename]
-      session[:newfilename] = params[:video_upload_new][:filename]
-      # @file = params[:file]
-      File.open("./public/#{@filename}", 'wb') do |f|
+  post '/upload_1' do
+      tempfile = params[:video_upload_1][:tempfile]
+      @filename1 = params[:video_upload_1][:filename]
+      session[:filename1] = params[:video_upload_1][:filename]
+      File.open("./public/#{@filename1}", 'wb') do |f|
         f.write(tempfile.read)
       end
       redirect '/'
