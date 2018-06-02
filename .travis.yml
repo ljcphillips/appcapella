@@ -2,12 +2,12 @@ language: ruby
 rvm:
 - 2.5.0
 script:
+- xvfb-run make test
 - bundle exec rspec spec
 services:
 before_install:
 - gem install bundler
 before_script:
-addons: firefox: "50.0"
 deploy:
   provider:
   api_key:
