@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.5.0
 script:
-- bundle exec rspec spec
+- xvfb-run --server-args="-screen 0 1024x768x24" bundle exec rspec spec
 services:
 before_install:
 - gem install bundler
