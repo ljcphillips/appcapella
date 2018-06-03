@@ -13,9 +13,8 @@ class Appcapella < Sinatra::Base
 
   post '/upload_1' do
     tempfile = params[:video_upload_1][:tempfile]
-    @filename1 = params[:video_upload_1][:filename]
     session[:filename1] = params[:video_upload_1][:filename]
-    File.open("./public/#{@filename1}", 'wb') do |f|
+    File.open("./public/#{session[:filename1]}", 'wb') do |f|
       f.write(tempfile.read)
     end
     redirect '/'
@@ -23,9 +22,8 @@ class Appcapella < Sinatra::Base
 
   post '/upload_2' do
     tempfile = params[:video_upload_2][:tempfile]
-    @filename2 = params[:video_upload_2][:filename]
     session[:filename2] = params[:video_upload_2][:filename]
-    File.open("./public/#{@filename2}", 'wb') do |f|
+    File.open("./public/#{session[:filename2]}", 'wb') do |f|
       f.write(tempfile.read)
     end
     redirect '/'
@@ -33,9 +31,8 @@ class Appcapella < Sinatra::Base
 
   post '/upload_3' do
     tempfile = params[:video_upload_3][:tempfile]
-    @filename3 = params[:video_upload_3][:filename]
     session[:filename3] = params[:video_upload_3][:filename]
-    File.open("./public/#{@filename3}", 'wb') do |f|
+    File.open("./public/#{session[:filename3]}", 'wb') do |f|
       f.write(tempfile.read)
     end
     redirect '/'
@@ -43,9 +40,8 @@ class Appcapella < Sinatra::Base
 
   post '/upload_4' do
     tempfile = params[:video_upload_4][:tempfile]
-    @filename4 = params[:video_upload_4][:filename]
     session[:filename4] = params[:video_upload_4][:filename]
-    File.open("./public/#{@filename4}", 'wb') do |f|
+    File.open("./public/#{session[:filename4]}", 'wb') do |f|
       f.write(tempfile.read)
     end
     redirect '/'
