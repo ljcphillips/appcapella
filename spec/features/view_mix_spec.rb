@@ -1,4 +1,4 @@
-feature 'page should four videos' do
+feature 'page should show the mixed video' do
 
   scenario 'Mix video player is displayed' do
     visit '/view_mix'
