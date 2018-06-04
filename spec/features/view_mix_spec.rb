@@ -5,4 +5,5 @@ feature 'page should show the mixed video' do
     visit page.find('#mix')[:src]
     expect(page.status_code).to be(200)
   end
+
 end
