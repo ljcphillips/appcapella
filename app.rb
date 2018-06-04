@@ -51,9 +51,9 @@ class Appcapella < Sinatra::Base
   post '/mix' do
 
   # Should this logic be in a model?
-    File.delete('./public/mix.mp4') if File.exist?('./public/mix.mp4')
+    File.delete('./public/mix_video.mp4') if File.exist?('./public/mix_video.mp4')
 
-    system "ffmpeg -i './public/#{ session[:filename1] }' -i './public/#{ session[:filename2] }' -i './public/#{ session[:filename3] }' -i './public/#{ session[:filename4] }' -filter_complex \"nullsrc=size=640x480 [base]; [0:v] setpts=PTS-STARTPTS, scale=320x240 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=320x240 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=320x240 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=320x240 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=320 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=240 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=320:y=240\" -c:v libx264 ./public/mix.mp4 "
+    system "ffmpeg -i './public/#{ session[:filename1] }' -i './public/#{ session[:filename2] }' -i './public/#{ session[:filename3] }' -i './public/#{ session[:filename4] }' -filter_complex \"nullsrc=size=640x480 [base]; [0:v] setpts=PTS-STARTPTS, scale=320x240 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=320x240 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=320x240 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=320x240 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=320 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=240 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=320:y=240\" -c:v libx264 ./public/mix_video.mp4 "
 
     redirect '/view_mix'
   end
