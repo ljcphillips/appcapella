@@ -19,6 +19,6 @@ deploy:
   on:
     repo: ljcphillips/appcapella
 env:
-  - MOZ_HEADLESS=1
+  # - MOZ_HEADLESS=1
 addons:
   firefox: latest
