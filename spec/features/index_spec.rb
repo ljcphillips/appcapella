@@ -1,10 +1,6 @@
 require_relative '../../app.rb'
 
-p Appcapella.root
-
 feature 'page should four videos' do
-
-  p :root
 
   scenario 'first video is displayed' do
     visit '/'
@@ -56,7 +52,6 @@ feature 'should be able to upload and play video 1' do
 
   scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
     visit '/'
-    #THIS ABSOLUTE PATH NEEDS FIXING!
     attach_file("video_upload_1", Appcapella.root + '/spec/new_video.mov')
     find("#upload_video_1").click
     find("#playButton").click
@@ -77,7 +72,6 @@ feature 'should be able to upload and play video 2' do
 
   scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
     visit '/'
-    #THIS ABSOLUTE PATH NEEDS FIXING!
     attach_file("video_upload_2", Appcapella.root + '/spec/new_video.mov')
     find("#upload_video_2").click
     find("#playButton").click
@@ -98,7 +92,6 @@ feature 'should be able to upload and play video 3' do
 
   scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
     visit '/'
-    #THIS ABSOLUTE PATH NEEDS FIXING!
     attach_file("video_upload_3", Appcapella.root + '/spec/new_video.mov')
     find("#upload_video_3").click
     find("#playButton").click
@@ -119,7 +112,6 @@ feature 'should be able to upload and play video 4' do
 
   scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
     visit '/'
-    #THIS ABSOLUTE PATH NEEDS FIXING!
     attach_file("video_upload_4", Appcapella.root + '/spec/new_video.mov')
     find("#upload_video_4").click
     find("#playButton").click
