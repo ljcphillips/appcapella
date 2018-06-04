@@ -39,13 +39,13 @@ feature 'page should four videos' do
   # end
 end
 
-feature 'should upload and play a video' do
+feature 'should be able to upload and play video 1' do
   scenario 'there should be a video player that does not initially play', :js => true do
     visit '/'
     find("#playButton").click
-    get_paused1 = "$('#video1')[0].paused;"
-    is_paused1 = page.evaluate_script(get_paused1)
-    expect(is_paused1).to eq(true)
+    get_paused = "$('#video1')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(true)
   end
 
   scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
@@ -54,9 +54,71 @@ feature 'should upload and play a video' do
     attach_file("video_upload_1",'/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/new_video.mov')
     find("#upload_video_1").click
     find("#playButton").click
-    get_paused1 = "$('#video1')[0].paused;"
-    is_paused1 = page.evaluate_script(get_paused1)
-    expect(is_paused1).to eq(false)
+    get_paused = "$('#video1')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(false)
+  end
+end
+
+feature 'should be able to upload and play video 2' do
+  scenario 'there should be a video player that does not initially play', :js => true do
+    visit '/'
+    find("#playButton").click
+    get_paused = "$('#video2')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(true)
   end
 
+  scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
+    visit '/'
+    #THIS ABSOLUTE PATH NEEDS FIXING!
+    attach_file("video_upload_2",'/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/new_video.mov')
+    find("#upload_video_2").click
+    find("#playButton").click
+    get_paused = "$('#video2')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(false)
+  end
+end
+
+feature 'should be able to upload and play video 3' do
+  scenario 'there should be a video player that does not initially play', :js => true do
+    visit '/'
+    find("#playButton").click
+    get_paused = "$('#video3')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(true)
+  end
+
+  scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
+    visit '/'
+    #THIS ABSOLUTE PATH NEEDS FIXING!
+    attach_file("video_upload_3",'/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/new_video.mov')
+    find("#upload_video_3").click
+    find("#playButton").click
+    get_paused = "$('#video3')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(false)
+  end
+end
+
+feature 'should be able to upload and play video 4' do
+  scenario 'there should be a video player that does not initially play', :js => true do
+    visit '/'
+    find("#playButton").click
+    get_paused = "$('#video4')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(true)
+  end
+
+  scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
+    visit '/'
+    #THIS ABSOLUTE PATH NEEDS FIXING!
+    attach_file("video_upload_4",'/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/new_video.mov')
+    find("#upload_video_4").click
+    find("#playButton").click
+    get_paused = "$('#video4')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(false)
+  end
 end
