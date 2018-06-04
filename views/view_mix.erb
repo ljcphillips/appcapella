@@ -1,5 +1,99 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./src/index.js"></script>
+<!DOCTYPE html>
+ <html lang="en">
+   
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="./src/index.js"></script>
 
-<video controls="controls" width="100%" height="100%" id="mix_video"
-       name="video1" src="./mix_video.mp4"></video>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <meta name="description" content="">
+     <meta name="author" content="">
+
+     <title>AppCapella</title>
+
+     <!-- Bootstrap core CSS -->
+     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Custom styles for this template -->
+     <style>
+       body {
+         padding-top: 54px;
+       }
+       @media (min-width: 992px) {
+         body {
+           padding-top: 56px;
+         }
+       }
+
+     </style>
+
+   </head>
+
+   <body>
+
+     <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+       <div class="container">
+         <a class="navbar-brand" href="/">Appcapella</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+           <ul class="navbar-nav ml-auto">
+             <li class="nav-item active">
+               <a class="nav-link" href="/">Home
+                 <span class="sr-only">(current)</span>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">About</a>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </nav>
+
+     <div id="mixed_video" class="section md-padding bg-grey">
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-12 text-center p-5">
+             <h2 class="title">Your Appcapella Mix</h2>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-lg-12 p-5">
+             <video controls="controls" width="100%" height="100%" id="mix"
+                    name="video1" src="./mix.mp4" autoplay=true></video>
+           </div>
+         </div>
+       </div>
+       <div class="container">
+         <div class="row col-lg-12 m-5">
+           <button class="btn btn-primary col-md-4 offset-md-4" type="button" id="playButton">PLAY</button>
+         </div>
+       </div>
+     </div>
+
+     <!-- Page Content -->
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-12 text-center">
+           <h1 class="mt-5">A Sinatra Sisters Application</h1>
+           <p class="lead">Makers Academy Final Project - March 2018</p>
+           <ul class="list-unstyled">
+             <li>Bootstrap 4.1.1</li>
+             <li>jQuery 3.3.1</li>
+           </ul>
+         </div>
+       </div>
+     </div>
+
+     <!-- Bootstrap core JavaScript -->
+     <script src="vendor/jquery/jquery.min.js"></script>
+     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+   </body>
+
+ </html>
