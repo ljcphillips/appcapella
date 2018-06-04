@@ -11,6 +11,15 @@ class Appcapella < Sinatra::Base
     erb(:index)
   end
 
+  post '/upload_5' do
+    tempfile = params[:video_upload_5][:tempfile]
+    session[:filename5] = params[:video_upload_5][:filename]
+    File.open("./public/#{session[:filename5]}", 'wb') do |f|
+      f.write((tempfile).read)
+    end
+    redirect '/'
+  end
+
   post '/upload_1' do
     tempfile = params[:video_upload_1][:tempfile]
     session[:filename1] = params[:video_upload_1][:filename]
