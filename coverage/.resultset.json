@@ -125,6 +125,21 @@
         1,
         1,
         null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/features/view_mix_spec.rb": [
@@ -139,6 +154,6 @@
         null
       ]
     },
-    "timestamp": 1528112295
+    "timestamp": 1528208955
   }
 }

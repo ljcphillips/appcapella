@@ -122,3 +122,18 @@ feature 'should be able to upload and play video 4' do
     expect(is_paused).to eq(false)
   end
 end
+
+feature 'It should be possible to record a video and have it play back', :js => true do
+  scenario 'Upload to the first video pane' do
+    visit ('/')
+    find("#record").click
+    sleep 1
+    find("#stop").click
+    page.accept_prompt(with: '1')
+    page.click_button "OK"
+    find("#playButton").click
+    get_paused = "$('#video1')[0].paused;"
+    is_paused = page.evaluate_script(get_paused)
+    expect(is_paused).to eq(false)
+  end
+end
