@@ -6,10 +6,10 @@ script:
 services:
 before_install:
 - gem install bundler
-- wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-arm7hf.tar.gz
-- mkdir geckodriver
-- tar -xzf geckodriver-v0.19.1-arm7hf.tar.gz -C geckodriver
-- export PATH=$PATH:$PWD/geckodriver
+# - wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-arm7hf.tar.gz
+# - mkdir geckodriver
+# - tar -xzf geckodriver-v0.19.1-arm7hf.tar.gz -C geckodriver
+# - export PATH=$PATH:$PWD/geckodriver
 before_script:
 deploy:
   provider:
@@ -19,6 +19,6 @@ deploy:
   on:
     repo: ljcphillips/appcapella
 env:
-  - MOZ_HEADLESS=1
+  # - MOZ_HEADLESS=1
 addons:
-  firefox: latest
+  # firefox: latest
