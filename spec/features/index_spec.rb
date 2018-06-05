@@ -52,6 +52,9 @@ feature 'should be able to upload and play video 1' do
 
   scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
     visit '/'
+    p "***********"
+    p Appcapella.root
+    p "***********"
     attach_file("video_upload_1", Appcapella.root + '/spec/new_video.mov')
     find("#upload_video_1").click
     find("#playButton").click
