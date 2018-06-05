@@ -81,7 +81,7 @@ DEPENDENCIES
   puma
   rack-test
   rspec
-  selenium-webdriver
+  selenium-webdriver (>= 2.45.0.dev3)
   shotgun
   simplecov
   simplecov-console
