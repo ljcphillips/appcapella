@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/features/index_spec.rb": [
+      "/Users/lorrainephillips/Projects/appcapella/spec/features/index_spec.rb": [
         1,
         1,
         4,
@@ -28,7 +28,7 @@
         null,
         null,
         1,
-        5,
+        13,
         null,
         1,
         4,
@@ -40,6 +40,29 @@
         4,
         null,
         null,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        null,
+        null,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        null,
+        4,
+        4,
         4,
         4,
         4,
@@ -70,7 +93,7 @@
         null,
         null
       ],
-      "/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/features/view_mix_spec.rb": [
+      "/Users/lorrainephillips/Projects/appcapella/spec/features/view_mix_spec.rb": [
         1,
         1,
         1,
@@ -92,15 +115,16 @@
         null,
         null,
         1,
-        null,
-        2,
-        null,
         1,
         1,
         1,
-        4,
-        4,
-        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -110,6 +134,6 @@
         null
       ]
     },
-    "timestamp": 1528282655
+    "timestamp": 1528284219
   }
 }
