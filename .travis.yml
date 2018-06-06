@@ -10,6 +10,13 @@ before_install:
 - mkdir geckodriver
 - tar -xzf geckodriver-v0.19.1-arm7hf.tar.gz -C geckodriver
 - export PATH=$PATH:$PWD/geckodriver
+install: # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
+  - wget -N http://chromedriver.storage.googleapis.com/LATEST_RELEASE -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 before_script:
 deploy:
   provider:
@@ -21,4 +28,4 @@ deploy:
 env:
   # - MOZ_HEADLESS=1
 addons:
-  # firefox: latest
+  chrome: stable
