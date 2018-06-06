@@ -38,7 +38,6 @@ feature 'Uploads' do
 
       scenario 'It should be possible to upload a video file and play it in the video frame', :js => true do
         visit '/'
-        #THIS ABSOLUTE PATH NEEDS FIXING!
         attach_file("video_upload_#{num}", test_mov_file)
         find("#upload_video_#{num}").click
         find("#playButton").click
@@ -57,10 +56,7 @@ feature 'It should be possible to record a video and have it play back', :js => 
     find("#record").click
     sleep 1
     find("#stop").click
-
     page.accept_prompt(with: '1')
-    # page.click_button "OK"
-
     find("#playButton").click
     get_paused = "$('#video1')[0].paused;"
     is_paused = page.evaluate_script(get_paused)
