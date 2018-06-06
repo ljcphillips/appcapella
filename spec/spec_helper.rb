@@ -2,6 +2,7 @@ ENV['RACK_ENV'] = 'test'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
+require 'byebug'
 require 'capybara'
 require 'capybara/rspec'
 require 'simplecov'
@@ -9,6 +10,7 @@ require 'simplecov-console'
 require 'rack/test'
 require 'rspec'
 require "selenium/webdriver"
+require 'pry'
 
 require_relative './features/web_helpers'
 
