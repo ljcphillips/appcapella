@@ -62,7 +62,7 @@ GEM
       hirb
       simplecov
     simplecov-html (0.10.2)
-    sinatra (2.0.1)
+    sinatra ~> 2.0.2
       mustermann (~> 1.0)
       rack (~> 2.0)
       rack-protection (= 2.0.1)
