@@ -8,10 +8,10 @@ script:
 services:
 before_install:
 - gem install bundler
-- wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-arm7hf.tar.gz
-- mkdir geckodriver
-- tar -xzf geckodriver-v0.19.1-arm7hf.tar.gz -C geckodriver
-- export PATH=$PATH:$PWD/geckodriver
+# - wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-arm7hf.tar.gz
+# - mkdir geckodriver
+# - tar -xzf geckodriver-v0.19.1-arm7hf.tar.gz -C geckodriver
+# - export PATH=$PATH:$PWD/geckodriver
 install: # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
   - wget -N http://chromedriver.storage.googleapis.com/LATEST_RELEASE -P ~/
   - unzip ~/chromedriver_linux64.zip -d ~/
