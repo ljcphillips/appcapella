@@ -45,6 +45,29 @@ feature 'Uploads' do
         is_paused = page.evaluate_script(get_paused)
         expect(is_paused).to eq(false)
       end
+
+      scenario 'It should be possible to play a file and pause it', :js => true do
+        visit '/'
+        attach_file("video_upload_#{num}", test_mov_file)
+        find("#upload_video_#{num}").click
+        find("#playButton").click
+        sleep 1
+        get_paused = "$(\"#video#{num}\")[0].paused;"
+        find("#pauseButton").click
+        is_paused = page.evaluate_script(get_paused)
+        expect(is_paused).to eq(true)
+      end
+      scenario 'It should be possible to play a file and reset it back to the beginning', :js => true do
+        visit '/'
+        attach_file("video_upload_#{num}", test_mov_file)
+        find("#upload_video_#{num}").click
+        find("#playButton").click
+        sleep 2
+        find("#pauseButton").click
+        find("#resetButton").click
+        time = page.evaluate_script("$(\"#video#{num}\")[0].currentTime;")
+        expect(time).to eq(0)
+      end
     end
   end
 end
