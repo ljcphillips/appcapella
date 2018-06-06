@@ -1,24 +1,24 @@
-# language: ruby
-# rvm:
-# - 2.5.0
-# script:
-# - bundle exec rspec -b spec
-# services:
-# before_install:
-# - gem install bundler
-# # - wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-arm7hf.tar.gz
-# # - mkdir geckodriver
-# # - tar -xzf geckodriver-v0.19.1-arm7hf.tar.gz -C geckodriver
-# # - export PATH=$PATH:$PWD/geckodriver
-# before_script:
-# deploy:
-#   provider:
-#   api_key:
-#     secure:
-#   app: appcapella
-#   on:
-#     repo: ljcphillips/appcapella
-# env:
-#   # - MOZ_HEADLESS=1
-# addons:
-#   # firefox: latest
+language: ruby
+rvm:
+- 2.5.0
+script:
+- bundle exec rspec -b spec
+services:
+before_install:
+- gem install bundler
+- wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-arm7hf.tar.gz
+- mkdir geckodriver
+- tar -xzf geckodriver-v0.19.1-arm7hf.tar.gz -C geckodriver
+- export PATH=$PATH:$PWD/geckodriver
+before_script:
+deploy:
+  provider:
+  api_key:
+    secure:
+  app: appcapella
+  on:
+    repo: ljcphillips/appcapella
+env:
+  # - MOZ_HEADLESS=1
+addons:
+  # firefox: latest
