@@ -2,9 +2,9 @@ language: ruby
 rvm:
 - 2.5.0
 script:
+- bundle exec rspec -b spec
 - whereis google-chrome-stable
 - whereis chromedriver
-- bundle exec rspec -b spec
 services:
 before_install:
 - gem install bundler
