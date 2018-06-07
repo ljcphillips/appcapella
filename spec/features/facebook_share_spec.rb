@@ -1,5 +1,3 @@
-require_relative '../../fbdetails'
-
 feature 'User can share video on facebook' do
   scenario 'facebook share button posts mixed video on user profile', js: true do
     visit '/view_mix'
