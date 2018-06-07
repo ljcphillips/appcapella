@@ -1,0 +1,41 @@
+.navbar {
+  background-color: #222222 !important
+}
+
+#video-container {
+  margin: 2em auto 0;
+  width: 500px;
+  padding: 2em;
+  background: white;
+  -webkit-box-shadow: 0 1px 10px #D9D9D9;
+  -moz-box-shadow: 0 1px 10px #D9D9D9;
+  -ms-box-shadow: 0 1px 10px #D9D9D9;
+  -o-box-shadow: 0 1px 10px #D9D9D9;
+  box-shadow: 0 1px 10px #D9D9D9;
+}
+
+.background1 {
+  background: #222222 !important
+  /* background-color: white !important */
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  color: white !important;
+}
+
+#mix{
+  padding-top: 1em;
+}
+#top-buttons{
+  margin: 0 auto;
+    width: 100%;
+}
+
+body {
+  padding-top: 100px !important;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

@@ -16,7 +16,7 @@ jQuery( document ).ready(function($) {
 });
 
 jQuery( document ).ready(function($) {
-    $('#resetButton').click(function() {
+    $('#rewindButton').click(function() {
         $('#video1').get(0).currentTime = 0
         $('#video2').get(0).currentTime = 0
         $('#video3').get(0).currentTime = 0

@@ -3,6 +3,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./src/index.js"></script>
+<script src="src/script.js"></script>
 
   <head>
 
@@ -15,120 +16,112 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="index.css">
     <!-- Custom styles for this template -->
-    <style>
-      body {
-        padding-top: 54px;
-      }
-      @media (min-width: 992px) {
-        body {
-          padding-top: 56px;
-        }
-      }
-
-    </style>
-
   </head>
-
   <body>
+    <script src="src/script.js"></script>
+
+  <div class="background1">
+  <div class="container-fluid">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
       <div class="container">
-        <a class="navbar-brand" href="/">AppCapella</a>
+        <div id="logo">
+          <a class="navbar-brand" href="/">
+            <img src="AppcapellaLogo.png" width="250" height="75"/>
+          </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/ljcphillips/appcapella">About</a>
+              <a class="nav-link" href="https://github.com/ljcphillips/appcapella" target="_blank">About</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section class="main-controls">
-  <canvas class="visualizer" height="60px"></canvas>
-  <div id="buttons">
-    <button class="record" id='record'>Record</button>
-    <button class="stop" id='stop'>Stop</button>
-  </div>
-</section>
-   <section class="video-clips">
-   </section>
-   <script src="src/script.js"></script>
 
+
+
+    <div class="container">
+      <div id="top-buttons" class="col-lg-12 text-center" id="buttons">
+      <button class="record" name="record" type="button" id='record'>RECORD</button>
+      <button class="stop" name="stop" type="button" id='stop'>STOP</button>
+      <button type="button" id="playButton">PLAY</button>
+      <button type="button" id="pauseButton">PAUSE</button>
+      <button type="button" id="rewindButton">REWIND</button>
+      <button type="button" id="resetButton">
+        <a href="/reset">RESET</a>
+      </button>
+    </div>
     <div id="video wall" class="section md-padding bg-grey">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center p-5">
-            <h2 class="title">Videos</h2>
+          <div class="col-md-6 p-2" id="video-container">
+            <video controls="controls" width="100%" height="100%" id="video1"
+                  name="video1" src="<%= @filename1 %>" style="background-color:#343a40">
+            </video>
+          </div>
+          <div class="col-md-6 p-2" id="video-container">
+            <video controls="controls" width="100%" height="100%" id="video2"
+                  name="video2" src="<%= @filename2 %>" style="background-color:#343a40">
+            </video>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 p-2">
-            <video controls="controls" width="100%" height="100%" id="video1"
-                  name="video1" src="<%= @filename1 %>" style="background-color:orange">
-            </video>
+          <div class="col-md-6">
+            <form class="p-2" action="/upload_1" method="POST" enctype="multipart/form-data">
+              <input type="file" accept="video/*" name="video_upload_1">
+              <input type="submit" value="Upload video" id="upload_video_1">
+            </form>
           </div>
-          <div class="col-md-6 p-2">
-            <video controls="controls" width="100%" height="100%" id="video2"
-                  name="video2" src="<%= @filename2 %>" style="background-color:orange">
-            </video>
+          <div class="col-md-6">
+            <form class="p-2" action="/upload_2" method="POST" enctype="multipart/form-data">
+              <input type="file" accept="video/*" name="video_upload_2">
+              <input type="submit" value="Upload video" id="upload_video_2">
+            </form>
           </div>
-          <div class="col-md-6 p-2">
+        </div>
+        <div class="row">
+          <div class="col-md-6 p-2 mt-3" id="video-container">
             <video controls="controls" width="100%" height="100%" id="video3"
-                  name="video3" src="<%= @filename3 %>" style="background-color:orange">
+                  name="video3" src="<%= @filename3 %>" style="background-color:#343a40">
             </video>
           </div>
-          <div class="col-md-6 p-2">
+          <div class="col-md-6 p-2 mt-3" id="video-container">
             <video controls="controls" width="100%" height="100%" id="video4"
-                  name="video4" src="<%= @filename4 %>" style="background-color:orange">
+                  name="video4" src="<%= @filename4 %>" style="background-color:#343a40">
             </video>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <form class="p-2" action="/upload_3" method="POST" enctype="multipart/form-data">
+              <input type="file" accept="video/*" name="video_upload_3">
+              <input type="submit" value="Upload video" id="upload_video_3">
+            </form>
+          </div>
+          <div class="col-md-6">
+            <form class="p-2" action="/upload_4" method="POST" enctype="multipart/form-data">
+              <input type="file" accept="video/*" name="video_upload_4">
+              <input type="submit" value="Upload video" id="upload_video_4">
+            </form>
           </div>
         </div>
       </div>
-      <div class="container">
-          <div class="row col-lg-12 m-5">
-          <button class="btn btn-primary col-md-4 offset-md-4" type="button" id="playButton">PLAY</button>
-        </div>
-        <div class="row col-lg-12 m-5">
-          <button class="btn btn-primary col-md-4 offset-md-4" type="button" id="pauseButton">PAUSE</button>
-        </div>
-        <div class="row col-lg-12 m-5">
-          <button class="btn btn-primary col-md-4 offset-md-4" type="button" id="resetButton">RESET</button>
-        </div>
-        <div class="row col-md-6">
-          <form class="p-2" action="/upload_1" method="POST" enctype="multipart/form-data">
-            <input type="file" accept="video/*" name="video_upload_1">
-            <input type="submit" value="Upload video" id="upload_video_1">
-          </form>
-          <form class="p-2" action="/upload_2" method="POST" enctype="multipart/form-data">
-            <input type="file" accept="video/*" name="video_upload_2">
-            <input type="submit" value="Upload video" id="upload_video_2">
-          </form>
-          <form class="p-2" action="/upload_3" method="POST" enctype="multipart/form-data">
-            <input type="file" accept="video/*" name="video_upload_3">
-            <input type="submit" value="Upload video" id="upload_video_3">
-          </form>
-          <form class="p-2" action="/upload_4" method="POST" enctype="multipart/form-data">
-            <input type="file" accept="video/*" name="video_upload_4">
-            <input type="submit" value="Upload video" id="upload_video_4">
-          </form>
-        </div>
-        <div class="row col-lg-12">
-          <form class="offset-md-6" action="/mix" method="post" id="mix">
-            <button type="submit" formmethod="post">MIX</button>
-          </form>
-        </div>
+    </div>
+
+    <div class="container">
+      <div class="col-lg-12 text-center p-5">
+        <form action="/mix" method="post" id="mix">
+          <button class="btn btn-light"  type="submit" formmethod="post">MIX</button>
+        </form>
       </div>
     </div>
 
@@ -136,19 +129,18 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h1 class="mt-5">A Sinatra Sisters Application</h1>
+          <h4 class="mt-5">A Sinatra Sisters Application</h4>
           <p class="lead">Makers Academy Final Project - March 2018</p>
-          <ul class="list-unstyled">
-            <li>Bootstrap 4.1.1</li>
-            <li>jQuery 3.3.1</li>
-          </ul>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="src/script.js"></script>
 
   </body>
 
