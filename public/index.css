@@ -1,5 +1,5 @@
 .navbar {
-  background-color: white !important
+  background-color: #222222 !important
 }
 
 #video-container {
@@ -14,8 +14,28 @@
   box-shadow: 0 1px 10px #D9D9D9;
 }
 
+.background1 {
+  background: #222222 !important
+  /* background-color: white !important */
+}
+/*
+h1{
+  color: white !important
+} */
+
+#mix{
+  padding-top: 1em;
+}
+#top-buttons{
+  margin: 0 auto;
+    width: 100%;
+}
+
 body {
-  background: white
-  margin: 0;
-  padding: 0;
+  padding-top: 100px !important;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
 }
