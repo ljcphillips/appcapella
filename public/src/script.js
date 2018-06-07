@@ -56,7 +56,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
           // Creates a new post request, sending it the form; could make this asyncronous and add the automatic reload afterwards, but it breaks the play button (Jquery/XMLHttpRequest interference). Use Ajax instead?
           var request = new XMLHttpRequest();
-          request.open("POST", ("upload_" + number));
+          request.open("POST", ("upload_" + number), false);
           request.send(formData);
 
           // Reloads the page; this is temporarily suspended as it tends to happen too soon.
