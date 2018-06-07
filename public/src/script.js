@@ -54,12 +54,12 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           var formData = new FormData();
           formData.append(("video_upload_" + number), blob, ('video_' + number + '.mp4'));
 
-          // Creates a new post request, sending it the form; could make this asyncronous and add the automatic reload afterwards, but it breaks the play button (Jquery/XMLHttpRequest interference). Use Ajax instead?
+          // Creates a new post request, sending it the form; have made this asyncronous so that the page is only reloaded after data is sent.
           var request = new XMLHttpRequest();
           request.open("POST", ("upload_" + number), false);
           request.send(formData);
 
-          // Reloads the page; this is temporarily suspended as it tends to happen too soon.
+          // Reloads the page.
           location = location;
         }
       })
