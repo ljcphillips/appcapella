@@ -21,7 +21,6 @@ end
   #     expect(is_paused2).to eq(false)
   #   end
   # end
-# end
 
 feature 'Uploads' do
   let(:test_mov_file) { File.absolute_path('spec/fixtures/new_video.mov') }
@@ -30,7 +29,7 @@ feature 'Uploads' do
     feature "should be able to upload and play video #{num}" do
       scenario 'there should be a video player that does not initially play', :js => true do
         visit '/'
-        find("#playButton").click
+        find('#playButton').click
         get_paused = "$(\"#video#{num}\")[0].paused;"
         is_paused = page.evaluate_script(get_paused)
         expect(is_paused).to eq(true)
@@ -40,7 +39,7 @@ feature 'Uploads' do
         visit '/'
         attach_file("video_upload_#{num}", test_mov_file)
         find("#upload_video_#{num}").click
-        find("#playButton").click
+        find('#playButton').click
         get_paused = "$(\"#video#{num}\")[0].paused;"
         is_paused = page.evaluate_script(get_paused)
         expect(is_paused).to eq(false)
@@ -50,21 +49,22 @@ feature 'Uploads' do
         visit '/'
         attach_file("video_upload_#{num}", test_mov_file)
         find("#upload_video_#{num}").click
-        find("#playButton").click
+        find('#playButton').click
         sleep 1
         get_paused = "$(\"#video#{num}\")[0].paused;"
-        find("#pauseButton").click
+        find('#pauseButton').click
         is_paused = page.evaluate_script(get_paused)
         expect(is_paused).to eq(true)
       end
+
       scenario 'It should be possible to play a file and reset it back to the beginning', :js => true do
         visit '/'
         attach_file("video_upload_#{num}", test_mov_file)
         find("#upload_video_#{num}").click
-        find("#playButton").click
+        find('#playButton').click
         sleep 2
-        find("#pauseButton").click
-        find("#resetButton").click
+        find('#pauseButton').click
+        find('#resetButton').click
         time = page.evaluate_script("$(\"#video#{num}\")[0].currentTime;")
         expect(time).to eq(0)
       end
@@ -75,12 +75,12 @@ end
 feature 'It should be possible to record a video and have it play back', :js => true do
   scenario 'Upload to the first video pane' do
     Capybara.current_driver = :chrome
-    visit ('/')
-    find("#record").click
+    visit '/'
+    find('#record').click
     sleep 1
-    find("#stop").click
+    find('#stop').click
     page.accept_prompt(with: '1')
-    find("#playButton").click
+    find('#playButton').click
     get_paused = "$('#video1')[0].paused;"
     is_paused = page.evaluate_script(get_paused)
     expect(is_paused).to eq(false)
