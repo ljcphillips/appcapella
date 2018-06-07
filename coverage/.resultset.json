@@ -1,5 +1,18 @@
+{
   "RSpec": {
     "coverage": {
+      "/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/features/facebook_share_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/daniel/Desktop/Makers/Week-11/appcapella/spec/features/index_spec.rb": [
         1,
         1,
@@ -132,6 +145,6 @@
         null
       ]
     },
-    "timestamp": 1528368662
+    "timestamp": 1528369694
   }
 }
