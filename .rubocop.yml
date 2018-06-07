@@ -92,6 +92,8 @@ InverseMethods:
   Enabled: true
 LeadingCommentSpace:
   Enabled: true
+LineLength:
+  Enabled: false
 NegatedIf:
   Enabled: true
 NegatedWhile:
