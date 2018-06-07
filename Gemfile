@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.0'
 
+gem 'byebug'
 gem 'capybara'
 gem 'capybara-selenium'
 gem 'puma'
@@ -10,5 +11,7 @@ gem 'selenium-webdriver', '2.53.4'
 gem 'shotgun'
 gem 'simplecov'
 gem 'simplecov-console'
+gem 'pry'
 gem 'sinatra', '2.0.2'
 gem 'webdrivers'
+
