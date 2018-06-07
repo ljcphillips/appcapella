@@ -15,7 +15,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="index.css">
     <!-- Custom styles for this template -->
     <style>
       body {
@@ -32,36 +32,30 @@
   </head>
 
   <body>
+  <div class="container-fluid">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
       <div class="container">
-        <a class="navbar-brand" href="/">AppCapella</a>
+        <div id="logo">
+          <a class="navbar-brand" href="/">
+            <img src="AppcapellaLogo.png" width="250" height="75"/>
+          </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/ljcphillips/appcapella">About</a>
+              <a class="nav-link" href="https://github.com/ljcphillips/appcapella" target="_blank">About</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section class="main-controls">
-  <canvas class="visualizer" height="60px"></canvas>
-  <div id="buttons">
-    <button class="record" id='record'>Record</button>
-    <button class="stop" id='stop'>Stop</button>
-  </div>
-</section>
+
    <section class="video-clips">
    </section>
    <script src="src/script.js"></script>
@@ -72,24 +66,31 @@
           <div class="col-lg-12 text-center p-5">
             <h2 class="title">Videos</h2>
           </div>
+          <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="record" id='record'>Record</button>
+          <button class="stop" id='stop'>Stop</button>
+        </div>
+      </section>
         </div>
         <div class="row">
-          <div class="col-md-6 p-2">
+          <div class="col-md-6 p-2" id="video-container">
             <video controls="controls" width="100%" height="100%" id="video1"
                   name="video1" src="<%= @filename1 %>" style="background-color:orange">
             </video>
           </div>
-          <div class="col-md-6 p-2">
+          <div class="col-md-6 p-2" id="video-container">
             <video controls="controls" width="100%" height="100%" id="video2"
                   name="video2" src="<%= @filename2 %>" style="background-color:orange">
             </video>
           </div>
-          <div class="col-md-6 p-2">
+          <div class="col-md-6 p-2" id="video-container">
             <video controls="controls" width="100%" height="100%" id="video3"
                   name="video3" src="<%= @filename3 %>" style="background-color:orange">
             </video>
           </div>
-          <div class="col-md-6 p-2">
+          <div class="col-md-6 p-2" id="video-container">
             <video controls="controls" width="100%" height="100%" id="video4"
                   name="video4" src="<%= @filename4 %>" style="background-color:orange">
             </video>
@@ -138,13 +139,10 @@
         <div class="col-lg-12 text-center">
           <h1 class="mt-5">A Sinatra Sisters Application</h1>
           <p class="lead">Makers Academy Final Project - March 2018</p>
-          <ul class="list-unstyled">
-            <li>Bootstrap 4.1.1</li>
-            <li>jQuery 3.3.1</li>
-          </ul>
         </div>
       </div>
     </div>
+  </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
