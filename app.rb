@@ -73,5 +73,10 @@ class Appcapella < Sinatra::Base
     erb(:view_mix)
   end
 
+  get '/reset' do
+    session.clear
+    redirect '/'
+  end
+
   run! if app_file == $0
 end
