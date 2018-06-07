@@ -44,7 +44,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           console.log("recorder stopped");
 
           // Prompts for a number, creates elements for the video
-          var number = prompt('Fab, now which video would you like to replace? Enter 1, 2, 3 or 4. Once you RELOAD it will appear!');
+          var number = prompt('Fab, now which video would you like to replace? Enter 1, 2, 3 or 4.');
 
           // Here's our blob of chunks.
           var blob = new Blob(chunks, { 'type' : 'video/mp4' });
