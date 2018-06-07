@@ -9,7 +9,7 @@ require 'simplecov'
 require 'simplecov-console'
 require 'rack/test'
 require 'rspec'
-require "selenium/webdriver"
+require 'selenium/webdriver'
 require 'pry'
 
 require_relative './features/web_helpers'
