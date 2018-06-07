@@ -60,7 +60,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           request.send(formData);
 
           // Reloads the page; this is temporarily suspended as it tends to happen too soon.
-          //location = location;
+          location = location;
         }
       })
 
