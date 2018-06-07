@@ -44,7 +44,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           console.log("recorder stopped");
 
           // Prompts for a number, creates elements for the video
-          var number = prompt('Fab, now which video would you like to replace? Enter 1, 2, 3 or 4');
+          var number = prompt('Fab, now which video would you like to replace? Enter 1, 2, 3 or 4.');
 
           // Here's our blob of chunks.
           var blob = new Blob(chunks, { 'type' : 'video/mp4' });
@@ -54,13 +54,13 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           var formData = new FormData();
           formData.append(("video_upload_" + number), blob, ('video_' + number + '.mp4'));
 
-          // Creates a new post request, sending it the form
+          // Creates a new post request, sending it the form; have made this asyncronous so that the page is only reloaded after data is sent.
           var request = new XMLHttpRequest();
-          request.open("POST", ("upload_" + number));
+          request.open("POST", ("upload_" + number), false);
           request.send(formData);
 
-          // Reloads the page
-          location = location
+          // Reloads the page.
+          location = location;
         }
       })
 
