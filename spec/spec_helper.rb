@@ -19,7 +19,7 @@ Capybara.app = Appcapella
 
 Capybara.register_driver :chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    'goog:chromeOptions' => { args: %w(--use-fake-device-for-media-stream --use-fake-ui-for-media-stream) }
+    'goog:chromeOptions' => { args: %w(--use-fake-device-for-media-stream --use-fake-ui-for-media-stream start-maximized disable-infobars --disable-extensions --disable-dev-shm-usage --no-sandbox) }
   )
 
   Capybara::Selenium::Driver.new app,

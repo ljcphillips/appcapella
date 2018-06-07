@@ -1,5 +1,5 @@
 feature 'It should be possible to record four videos and mix them together' do
-  scenario 'Uploading four videos and pressing mix produces a new video', :js => true do
+  scenario 'Recording four videos and pressing mix produces a new video', :js => true do
     Capybara.current_driver = :chrome
     1.upto(4) do |num|
       visit ('/')
@@ -16,19 +16,18 @@ feature 'It should be possible to record four videos and mix them together' do
     Capybara.use_default_driver
   end
 end
-    
 
-feature 'page should show the mixed video' do
-  scenario 'Mix video should exist and play', :js => true do
-    visit '/'
-    attach_file("video_upload_1", Appcapella.root + '/spec/new_video.mov')
-    find("#upload_video_1").click
-    attach_file("video_upload_2", Appcapella.root + '/spec/new_video.mov')
-    find("#upload_video_2").click
-    attach_file("video_upload_3", Appcapella.root + '/spec/new_video.mov')
-    find("#upload_video_3").click
-    attach_file("video_upload_4", Appcapella.root + '/spec/new_video.mov')
-    find("#upload_video_4").click
+
+feature 'It should be possible to upload four videos and mix them together' do
+
+  let(:test_mov_file) { File.absolute_path('spec/fixtures/new_video.mov') }
+
+  scenario 'Uploading four videos and pressing mix produces a new video', :js => true do
+    visit ('/')
+    1.upto(4) do |num|
+      attach_file("video_upload_#{num}", test_mov_file)
+      find("#upload_video_#{num}").click
+    end
     find("#mix").click
     page.evaluate_script("$('#mix_video').get(0).play()")
     get_paused = "$('#mix_video')[0].paused;"

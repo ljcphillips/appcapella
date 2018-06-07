@@ -96,7 +96,7 @@ DEPENDENCIES
   shotgun
   simplecov
   simplecov-console
-  sinatra
+  sinatra (= 2.0.2)
   webdrivers
 
 RUBY VERSION
