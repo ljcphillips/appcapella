@@ -11,6 +11,7 @@ require 'rack/test'
 require 'rspec'
 require 'selenium/webdriver'
 require 'pry'
+require 'webdrivers'
 
 require_relative './features/web_helpers'
 

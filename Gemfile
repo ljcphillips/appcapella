@@ -10,6 +10,7 @@ gem 'shotgun'
 gem 'simplecov'
 gem 'simplecov-console'
 gem 'sinatra'
+gem 'webdrivers'
 
 gem 'selenium-webdriver', '2.53.4'
 gem 'capybara-selenium'
