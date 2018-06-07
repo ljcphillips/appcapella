@@ -80,6 +80,7 @@ feature 'It should be possible to record a video and have it play back', :js => 
     sleep 1
     find("#stop").click
     page.accept_prompt(with: '1')
+    visit current_path
     find("#playButton").click
     get_paused = "$('#video1')[0].paused;"
     is_paused = page.evaluate_script(get_paused)

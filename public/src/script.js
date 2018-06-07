@@ -44,7 +44,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           console.log("recorder stopped");
 
           // Prompts for a number, creates elements for the video
-          var number = prompt('Fab, now which video would you like to replace? Enter 1, 2, 3 or 4');
+          var number = prompt('Fab, now which video would you like to replace? Enter 1, 2, 3 or 4. Once you RELOAD it will appear!');
 
           // Here's our blob of chunks.
           var blob = new Blob(chunks, { 'type' : 'video/mp4' });
@@ -54,13 +54,13 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           var formData = new FormData();
           formData.append(("video_upload_" + number), blob, ('video_' + number + '.mp4'));
 
-          // Creates a new post request, sending it the form
+          // Creates a new post request, sending it the form; could make this asyncronous and add the automatic reload afterwards, but it breaks the play button (Jquery/XMLHttpRequest interference). Use Ajax instead?
           var request = new XMLHttpRequest();
-          request.open("POST", ("upload_" + number), false);
+          request.open("POST", ("upload_" + number));
           request.send(formData);
 
-          // Reloads the page
-          location = location;
+          // Reloads the page; this is temporarily suspended as it tends to happen too soon.
+          //location = location;
         }
       })
 
