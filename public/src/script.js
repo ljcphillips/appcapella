@@ -56,11 +56,11 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
           // Creates a new post request, sending it the form
           var request = new XMLHttpRequest();
-          request.open("POST", ("upload_" + number));
+          request.open("POST", ("upload_" + number), false);
           request.send(formData);
 
           // Reloads the page
-          //location = location
+          location = location;
         }
       })
 
